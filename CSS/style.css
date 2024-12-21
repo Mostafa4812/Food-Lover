@@ -1,0 +1,531 @@
+/* 
+============================================
+                Common Section
+============================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=PT+Sans:wght@400;700&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100;300;400;500;700;900&family=Varela+Round&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    margin: auto;
+    width: 90vw;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.btn{
+    display: block;
+    margin-top: 25px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 15px;
+    padding-block: 10px;
+    transition: all 0.3s ease-out;
+    width: 150px;
+    text-align: center;
+}
+/* 
+============================================
+                Nav Section
+============================================
+*/
+.point{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    /* align-content: end; */
+}
+.point a{
+    color: #383848;
+}
+.point i {
+    position: fixed; 
+    bottom: 0;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4b95b;
+    border: 1px solid #383848;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 10000;
+}
+.point i:hover{
+    transition: all .5s;
+    opacity: .8;
+}
+header{
+    background-image: url('/images/home_bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+.header-lists{
+    display: flex;
+    align-items: center;
+}
+header .list-item{
+    font-size: 20px;
+    margin-inline:5px;
+}
+header .list-item > a{
+    padding: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white ;
+    transition: border-bottom-width .3s ease-out;
+}
+header .list-item > a:hover{
+    border-bottom: 4px solid #f50 ;
+    border-radius: 10px;
+}
+
+/* 
+============================================
+                Main Section
+============================================
+*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+main .title{
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #fff;
+    line-height: 1.4;
+}
+.sub-title{
+    text-transform: capitalize;
+    color: #fff;
+}
+.sub-text{
+    color: #e4b95b;
+}
+header::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0,0,0,.6);
+}
+header *{
+    z-index: 100;
+}
+.btn-primary{
+    text-transform: capitalize;
+}
+.btn-primary:hover{
+    border: 2px solid #383848;
+    color: #383848;
+    background-color: #e4b95b;
+}
+/* 
+============================================
+                About Section
+============================================
+*/
+.PB-y{
+    padding-block: 40px;
+}
+.about{
+    height: 85vh;
+}
+.MB-y{
+    margin-block: 50px;
+}
+.about-title{
+    text-align: center;
+    line-height: 1.4;
+}
+.about-title .title{
+    color: #383848;
+    font-size: 36px;
+    text-transform: capitalize;
+}
+.about-title .sub-title{
+    color: #888;
+}
+.about-content{
+    display: flex;
+    justify-content: space-between;
+}
+.about-content .about-left{
+    width: 600px;
+}
+.about-left p{
+    line-height: 1.8;
+    color: #888;
+}
+.about-right img{
+    width: 500px;
+    height: 400px;
+}
+.about-left .btn-secondary{
+    text-transform: capitalize;
+    background-color: #333;
+    
+}
+.about-left .btn-secondary:hover{
+    border: 2px solid #383848;
+    color: #383848;
+    background-color: #e4b95b;
+}
+/* 
+============================================
+offer Section
+============================================
+*/
+.offer{
+    background-image: url('/images/offer-background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.offer-title{
+    text-align: center;
+    line-height: 1.4;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #e4b95b;
+}
+.offer-title .sub-title{
+    color: #eee;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cards{
+    display: flex;
+    /* justify-content: center; */
+}
+.cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 2;
+}
+.card .img-card{
+    width: 200px;
+}
+.card .title{
+    font-size: 25px;
+    color: #eee;
+    text-transform: capitalize;
+}
+.card .sub-title{
+    color: #eee;
+    font-weight: 100;
+    padding-inline:13px;
+    text-align: center;
+    line-height: 1.4;
+}
+.price{
+    color: #e4b95b;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.deduction-price{
+    padding-inline: 5px;
+    text-decoration: line-through;
+    color: #888;
+    font-size: 18px;
+}
+/* 
+============================================
+Menu Section
+============================================
+*/
+.menu{
+    height: 175vh;/* error ??? */
+}
+.menu-title,.gallery-title{
+    text-align: center;
+    line-height: 1.4;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #383848;
+}
+.menu-title .sub-title{
+    color: #a9a9a9;
+    font-size: 20px;
+    font-weight: 500;
+}
+.items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.left-item,.right-item{
+    display: flex;
+    align-items: center;
+}
+.left-item .details,.right-item .details{
+    padding: 20px;
+}
+.details .top-title{
+    margin-block-end: 10px;
+    display: flex;
+    padding-block-end: 10px;
+    justify-content: space-between;
+    border-bottom: 2px solid #eee;
+}
+.top-title .name{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #383848;
+}
+.details .info{
+    width: 400px;
+    line-height: 1.2;
+    color: #383848;
+    font-weight: 400;
+}
+.left-item img,.right-item img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.btn-menu{
+    text-transform: capitalize;
+    background-color: #e4b95b;
+    margin: 20px auto;
+    width: 15%;
+}
+.btn-menu:hover{
+    border: 2px solid #e4b95b;
+    background-color: #383848;
+}
+/* 
+============================================
+Daytime Section
+============================================
+*/
+.daytime{
+    background-image: url('/images/daytime_bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 45vh;
+}
+.daytime .container{
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.daytime-cards{
+    display: flex;
+    justify-content: space-around;
+}
+.daytime-card{
+    text-align: center;
+    line-height: 2;
+}
+
+.daytime-card .daytime-title{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #eee;
+}
+.daytime-card .info{
+    text-transform: uppercase;
+    color: #eee;
+}
+.daytime-card .middle-info{
+    text-transform: none;
+}
+.daytime-card .special-info{
+    text-transform: capitalize;
+    color: #eee;
+}
+/* 
+============================================
+Daytime Section
+============================================
+*/
+.gallery{
+    background-image: url('/images/offer-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.gallery .container{
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+.gallery-title .title{
+    color: #fff;
+}
+.gallery-parts{
+    display: grid;
+    grid-template-columns: repeat(3,.2fr);
+    justify-content: center;
+   grid-gap: 30px;
+}
+.gallery-parts img{
+    cursor: pointer;
+    border-radius: 10px;
+    width: 280px;
+    height: 200px;
+    opacity: .7;
+    transition: opacity .4s ease-in-out;
+}
+.gallery-parts img:hover{
+    opacity: 1;
+}
+/* 
+============================================
+Contact Section
+============================================
+*/
+.contact{
+
+}
+.contact .container{
+    align-items: center;
+    height: 100%;
+}
+.contact-items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-contact .item{
+    padding-block: 20px;
+}
+.left-contact{
+    display: flex;
+    flex-direction: column;
+    
+}
+.left-contact .item .sub-item{
+    line-height: 1.4;
+}
+.sub-item .fa-solid{
+    color: #e4b95b;
+}
+.sub-item .details{
+    margin-left: 5px;
+    color: #888;
+}
+.left-contact .item .header{
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #383848;
+}
+.left-contact .item .info{
+    width: 280px;
+    line-height: 1.4;
+    color: #888;
+}
+.right-contact{
+    display: flex; 
+    align-items: center;
+    padding: 15px;
+    
+}
+.right-contact form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.right-contact input{
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e4b95b;
+    border: 0px;
+    
+}
+#txt-area{
+    height: 120px;
+    background-color:#e4b95b;
+    border: 0px;
+    padding: 10px;
+    color: #383848;
+}
+input::placeholder,
+textarea::placeholder
+{
+    color: #383848;
+}
+.btn-contact{
+    text-transform: uppercase;
+    width: 50%;
+    background-color: #e4b95b;
+    margin: 20px auto;
+}
+.btn-contact:hover{
+    border: 2px solid #e4b95b;
+    background-color: #383848;
+}
+.item .links{
+    display: flex;
+    font-size: 30px;
+}
+.links .fa{
+    cursor: pointer;
+    margin-inline: 9px;
+}
+/* 
+===============================
+        footer
+===============================
+*/
+footer{
+    background-color: #383848;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #fff;
+}
+footer .info a{
+    color: #fff;
+}
+footer .info a:hover{
+    color: #e4b95b;
+}
